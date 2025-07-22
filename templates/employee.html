@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Emp Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for employee in employees %}
+
+    <tr>
+        <th scope="row">{{ employee.id }}</th>
+
+        <td>{{ employee.username }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.role }}</td>
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock %}
